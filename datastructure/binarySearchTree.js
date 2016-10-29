@@ -30,7 +30,17 @@ export default class bstree {
 
 	findMin(value) {
 		switch(compare(value, this.node.value)){
-			
+
+		}
+	}
+
+	findMax(value) {
+		switch (compare(value, this.node.value)) {
+			case expression:
+
+				break;
+			default:
+
 		}
 	}
 }
