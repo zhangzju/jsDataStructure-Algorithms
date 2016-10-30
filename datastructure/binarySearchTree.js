@@ -1,46 +1,68 @@
 class Node {
-	constructor(value){
-		this.value = value;
+	constructor(data, left, right) {
+		this.data = data;
+		this.left = left;
+		this.right = right;
 		this.repeat = 1;
-		this.left = null;
-		this.right = null;
 	}
 }
-//节点大于左子树任意节点，小于右子树任意节点
-export default class bstree {
-	constructor(value){
-		this.node = new Node(value);//make the root
+
+class binarySearchTree {
+	constructor() {
+		this.root = null;
+		this.insert = insert;
 		this.findMin = findMin;
 		this.findMax = findMax;
-		this.insert = insert;
-		this.contains = contains;
 		this.remove = remove;
-		this.compare = compare;
 	}
 
-	compare(value, storeValue) {
-		if (value > storeValue) {
-			return 1;
-		} else if (value < storeValue) {
-			return -1;
-		} else {
-			return 0;
+	insert(data) {
+		let node = new Node(data, null, null);
+		if(!this.root) {
+			return this.root = node;
+		}
+
+		let currentNode = this.root;
+		let parentNode = null;
+		while (true) {
+			parentNode = currentNode;
+			if (data < currentNode.data) {
+				currentNode = currentNode.left;
+				if (currentNode === null) {
+					parentNode.left = node;
+					break;
+				}
+			}else {
+				currentNode = currentNode.right;
+				if (currentNode === null) {
+					parentNode.right = node;
+					break;
+				}
+			}
 		}
 	}
 
-	findMin(value) {
-		switch(compare(value, this.node.value)){
-
+	findMin() {
+		let node = this.root;
+		while (true) {
+			if (node.left != null) {
+				node = node.left;
+			}else {
+				return node.value;
+			}
 		}
 	}
 
-	findMax(value) {
-		switch (compare(value, this.node.value)) {
-			case expression:
-
-				break;
-			default:
-
+	findMax() {
+		let node = this.root;
+		while (true) {
+			if (node.right != null) {
+				node = node.right;
+			}else {
+				return node.data;
+			}
 		}
 	}
+
+
 }
