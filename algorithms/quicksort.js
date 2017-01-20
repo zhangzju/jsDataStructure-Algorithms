@@ -1,5 +1,4 @@
-var quicksort = (function(){
-var qSort = function qSort(arr=[]){
+export function qSort(arr=[]){
         if (arr.length <= 1) {
           return arr;
         }
@@ -16,6 +15,5 @@ var qSort = function qSort(arr=[]){
         }
 
         return [].concat(qSort(left), key, qSort(right))
-       }
-  }
-})();
+      }
+

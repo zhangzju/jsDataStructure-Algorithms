@@ -1,5 +1,4 @@
-var selectsort = (function(){
-  var sSort = function selectionSort(arr) {
+export function selectionSort(arr) {
     var len = arr.length;
     var minIndex, temp;
     for (var i = 0; i < len - 1; i++) {
@@ -16,8 +15,3 @@ var selectsort = (function(){
     return arr;
   }
 
-  return {
-    sSort: sSort
-  }
-
-})();

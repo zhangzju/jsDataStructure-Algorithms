@@ -1,5 +1,4 @@
-var insertSort = ({
-  var iSort = function iSort(arr=[]){
+export function iSort(arr=[]){
         for (var i = 1; i < arr.length; i++) {
             var key = arr[i];
             var j = i - 1;
@@ -11,4 +10,4 @@ var insertSort = ({
         }
         return arr;
   }
-})();
+

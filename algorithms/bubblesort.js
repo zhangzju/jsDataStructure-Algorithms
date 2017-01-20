@@ -1,5 +1,5 @@
 
-var bubbleSort = (function(){
+export function bubbleSort(){
   var bSort = function(arr=[]) {
     let len = arr.length-1;
     while (len > 0) {
@@ -38,4 +38,4 @@ var bubbleSort = (function(){
     bSort: bSourt,
     bSort_double: bSort_double
   }
-})();
+}

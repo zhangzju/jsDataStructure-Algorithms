@@ -1,17 +1,18 @@
-var shellSort = ({
-  var shSort = function shSort(arr=[]){
-    let gap = arr.length/2; //步进参数
-    let i,j, key;
-    for (gap; gap >=1; gap = gap/2) {
-      for(i = d;i <n; i++){
-        key = a[i];
-        for(j = i-d; j>=0 && a[j] >key; j-=d){
-          a[j+d]=a[j];
-        }
-        a[j+d]=temp;
-      }
-    }
-
-    return arr;
+export function shellSort(arr) {
+  var len = arr.length,
+    temp,
+    gap = 1;
+  while (gap < len / 3) { //动态定义间隔序列
+    gap = gap * 3 + 1;
   }
-})();
+  for (gap; gap > 0; gap = Math.floor(gap / 3)) {
+    for (var i = gap; i < len; i++) {
+      temp = arr[i];
+      for (var j = i - gap; j >= 0 && arr[j] > temp; j -= gap) {
+        arr[j + gap] = arr[j];
+      }
+      arr[j + gap] = temp;
+    }
+  }
+  return arr;
+}
