@@ -20,4 +20,8 @@
 ## DataStructure
 
 1. 二叉树 -- binarySearchTree.js
-2. ​
+2. 队列 -- singleQueue.js
+3. 单链表 -- singleLinkedList.js
+4. 栈 -- normalStack.js
+5. 双向链表 -- doubleLinkedList.js
+6. 哈夫曼树 -- huffmanTree.js
