@@ -1,8 +1,6 @@
 # jsDataStructure-Algorithms
 使用Javascript实现一些数据结构和算法
 
-
-
 ## Algorithms
 
 1. 冒泡排序 -- bubbleSort.js
@@ -14,8 +12,7 @@
 7. 堆排序 -- heapSort.js
 8. 基数排序 -- radixSort.js
 9. Base64编码 -- base64.js
-
-
+10. 二分查找 -- binaryChop.js
 
 ## DataStructure
 
